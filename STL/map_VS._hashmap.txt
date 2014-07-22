@@ -1,0 +1,20 @@
+0. tr1/unordered_map is much faster than std::map based on my experiment
+unordered_map_VS._map.cc
+
+    time 10 times faster than std::map
+    hash table uses 1.4G memory, map uses 1.6G memory;
+
+1.map is impliment with red black tree
+    insert/delete/query T(n) = O(log(n))
+    
+  hashmap  
+    insert/delete/query T(n) = O(1)  
+
+But log(n) is not so bad , we can query one key within 20 compare if
+map.size() == 100W
+
+2.map space using is O(n)
+  hashmap use more space 
+  
+3.map maitain order of keys
+  hashmap not
